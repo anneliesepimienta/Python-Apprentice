@@ -7,10 +7,13 @@ tell the user what age groups the user is in. The groups are:
 
 0-2: Baby
 3-5: Toddler
-6-12: Child
-13-19: Teen
-20-64: Adult
+6-9: Child
+10-12: Preteen
+13-17: Teen
+18-64: Adult
 65+: Senior
+
+
 
 Except, if the user is the same age as you, print "You are pretty awesome!"
 
@@ -31,13 +34,16 @@ messagebox.showinfo('What you are', "You are a baby.")
 
 """
 
+ 
+
+
 from tkinter import messagebox, simpledialog, Tk # import required modules
 
 window = Tk()     # Create a window object
 window.withdraw() # Hide the window; we just want to see pop ups
 
 # Ask the user's age
-
+age = simpledialog.askinteger("Your Age", "How old are you?")
 # Use if statements to determine the age group
 # and create a message
 
