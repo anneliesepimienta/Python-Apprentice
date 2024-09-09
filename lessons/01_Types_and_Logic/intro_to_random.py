@@ -1,6 +1,6 @@
 import random
 
-# Create an if-main code block
+
 
 
 # RANDOM WHOLE NUMBERS

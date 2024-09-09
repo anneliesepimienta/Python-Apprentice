@@ -12,14 +12,13 @@ at the comments and the code snippets in the previous lessons, like
 # Import the required modules
 
 # Create a window object
-
+window = Tk()
 # Hide the window, hint: use the withdraw method
-
+window.withdraw
 # Ask the user for the first number   
-
-# Ask the user for the second number
-
+num1 = input("Enter a number")
+num2 = input("Enter another number")
 # Display the sum of the two numbers 
-
+print("The sum of your numbers is " + str(int(num1) + int(num2)))
 # Keep the window open
 
