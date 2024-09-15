@@ -9,7 +9,7 @@ at the comments and the code snippets in the previous lessons, like
 
 """
 
-# Import the required modules
+from tkinter import messagebox, simpledialog, Tk# Import the required modules
 
 # Create a window object
 window = Tk()
@@ -21,4 +21,4 @@ num2 = input("Enter another number")
 # Display the sum of the two numbers 
 print("The sum of your numbers is " + str(int(num1) + int(num2)))
 # Keep the window open
-
+window.mainloop()

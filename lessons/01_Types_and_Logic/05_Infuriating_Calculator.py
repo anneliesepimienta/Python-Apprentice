@@ -42,5 +42,5 @@ elif opp == "divide":
 else:
     print("check your spelling, capitalization, or make sure that the operation you inputed is one of the options.")
 # If the user enters an unknown operation, display an error message. ( use messagebox.showerror()
-
+    messagebox.showerror(title="", message="there was an error in your responce please check for if it was an option or for spelling errors.")
 # Keep the window open
