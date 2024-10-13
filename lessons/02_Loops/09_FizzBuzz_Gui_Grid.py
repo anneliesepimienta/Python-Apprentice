@@ -35,7 +35,16 @@ app = App("Numbers Grid", layout="grid")
 # Or you can use a single loop and calculate the row and column
 for i in range(10):
     for j in range(10):
-        print(i,j)
+        emoji=i*10+j
+        if emoji % 15 == 0:
+            Text(app, text=('🐍'), grid=[i, j], color="black")
+        elif emoji % 5 == 0:
+            Text(app, text=('🦡'), grid=[i, j], color="black")
+        elif emoji % 3 == 0:
+            Text(app, text=('🍄'), grid=[i, j], color="black")
+        else:
+            Text(app, text=str(emoji), grid=[i, j], color="black")
+
 # In the loop, calculate or increment the number
 
 # Use % determing the display, using fizzbuzz rules
