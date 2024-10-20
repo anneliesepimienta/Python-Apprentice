@@ -27,7 +27,7 @@ an error message will be displayed and new definitions will not be added.
 def add_definition(db, key, value):
     """
     Add a new definition to the database.
-
+    
     Parameters:
     - db (dict): The database to add the definition to.
     - key (str): The key for the new definition.
@@ -38,7 +38,8 @@ def add_definition(db, key, value):
 
     If there are already 5 items in the database, an error message is displayed and the new item is not added.
     """
-
+    db[key]=value
+   
     # Check the limit
 
     # Set the item in the database
@@ -59,15 +60,21 @@ def delete_definition(db, key):
     """
 
     # Delete the item from db if it is present
-
+    db.remove(key)
     pass
 
 
 def is_funny(definition):
+    funny_word_found = False
+    funny_words = ['fun', 'funny', 'hilarious', 'amusing', 'wacky', 'spleen']
+    for i in funny_words:
+        if i in definition:
+            funny_word_found=True
+
     """
     Check if the definition is funny, which means it contains one of the words:
 
-        'fun', 'funny', 'hilarious', 'amusing', 'pants', 'spleen'
+        'fun', 'funny', 'hilarious', 'amusing', 'wacky', 'spleen'
 
     Args:
         definition (str): The definition to check.
@@ -78,7 +85,7 @@ def is_funny(definition):
     
     # Return True if the definition contains any of the funny words, False otherwise
 
-    return False
+    return funny_word_found
 
 def update_listbox(db):
     """
@@ -91,11 +98,11 @@ def update_listbox(db):
     # This function will return a list of definitions to be displayed in the listbox, like
     # the one below. (For your function, you should set this list to the empty list)
     l = [
-        "Item 1: Fake Definition 1",
-        "Item 2: Fake Definition 2",
-        "Item 3: fake Definition 3"
+        
     ]
-
+    for i in db.keys():
+        s= i +": "+ db[i]
+        l.append(s)
     # Add each definition to a string
     # iterate over the dict's key-value pairs and turn them into
     # strings, then add the strings to the list with .append()
