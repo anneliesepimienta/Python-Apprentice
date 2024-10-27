@@ -1,8 +1,8 @@
 #imports
 from guizero import App, Box, PushButton, Text, info
 
-X_MARK = "X"
-O_MARK = "O"
+X_MARK = "x"
+O_MARK = "o"
 
 # Implement check_row() and check_win() to allow the game to check if a player has won
 # IMPORTANT! In your code, you should use the constants X_MARK and O_MARK instead of the strings "x" and "o"
@@ -15,7 +15,13 @@ def check_row(l):
     Returns:
         The winner's token ( x or o ) if there is one, otherwise None
         """
-
+    
+    for row in l:
+        if row[0]==row[1]==row[2]:
+            if X_MARK==row[0]:
+                return X_MARK 
+            if O_MARK==row[0]:
+                return O_MARK
     return None
 
 def check_win(board):
@@ -26,8 +32,27 @@ def check_win(board):
     Returns:
         The winner's token ( x or o ) if there is one, otherwise None
     """
-
+    transposed = list(zip(*board)) # <--- HERE IS THE MAGIC
+    winnnnnnnnnnnnnnner = check_row(board)
+    if X_MARK == winnnnnnnnnnnnnnner:
+        return X_MARK 
+    if O_MARK == winnnnnnnnnnnnnnner:
+        return O_MARK
+    winnnnnnnnnnnnnnner = check_row(transposed)
+    if X_MARK == winnnnnnnnnnnnnnner:
+        return X_MARK 
+    if O_MARK == winnnnnnnnnnnnnnner:
+        return O_MARK
     return None
+
+"""""Last login: Wed Oct 23 20:03:15 on ttys001
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+iMac-22:~ league$ """""
+
+
 
 # The following code is the main part of the program. It creates a GUI for the
 # game and handles the game logic. Implement the functions above first, then
