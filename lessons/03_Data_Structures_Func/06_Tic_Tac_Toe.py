@@ -43,6 +43,16 @@ def check_win(board):
         return X_MARK 
     if O_MARK == winnnnnnnnnnnnnnner:
         return O_MARK
+    if board[0][0]==board[1][1]==board[2][2]:
+        if X_MARK == board[0][0]:
+            return X_MARK
+        if O_MARK == board[0][0]:
+            return O_MARK
+    if board[0][2]==board[1][1]==board[2][0]:
+        if X_MARK == board[0][2]:
+            return X_MARK
+        if O_MARK == board[0][2]:
+            return O_MARK 
     return None
 
 """""Last login: Wed Oct 23 20:03:15 on ttys001

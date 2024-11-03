@@ -8,8 +8,11 @@ from guizero import App, Box, Text, TextBox, PushButton, ListBox, error
 
 # TODO)
 #   1. Create a turtle.
+jayfeather = turtle.Turtle()
 #   2. Write 3 function definitions for drawing a square, triangle, and
 #      circle.
+def drawcircle(Turtle t):
+    jayfeather.drawcircle()
 #   3. Ask the user for the for a shape to draw.
 #   4. Draw the appropriate shape depending on their answer (call the right
 #      function)
