@@ -18,7 +18,7 @@ screen.bgcolor("white")
 walker = turtle.Turtle()
 walker.shape("turtle")
 walker.penup()
-walker.speed(0)  # Set to the maximum speed
+walker.speed(10)  # Set to the maximum speed
 walker.goto(0, 0)  # Start in the middle of the grid
 walker.pendown()
 
@@ -37,14 +37,17 @@ def random_walk(walker, steps):
     steps (int): The number of steps to take
 
     """
-
+    
     # You can make the turle move randomly in either of two ways: randomly choosing a direction
     # or randomly choosing a angle to turn. You can use random.choice() to select a random element
     # from a list, like this: 
     # direction = random.choice(["N", "E", "S", "W"])
     # or
     # angle = random.choice([0, 90, 180, 270])
-    #
+    for i in range(steps):
+        angle = random.choice([0, 90, 180, 270])
+        walker.setheading(angle)
+        walker.forward(10)
     # Or you can use random.randint() to generate a random integer between two values, like this:
     # angle_index = random.randint(0, 4)
     # directions = ["N", "E", "S", "W"] # or directions = [0, 90, 180, 270]
@@ -64,7 +67,7 @@ def random_walk(walker, steps):
 
 
 # Start the random walk
-random_walk(walker, 200)
+random_walk(walker, 20000)
 
 # Close the turtle window on click
 screen.exitonclick()
