@@ -36,7 +36,7 @@ elif randNum == 2:  # ;
 # 7. If your variable is  3
 elif randNum == 3:  # ;
     # -- invent your own message to give to the user (be nice).
-    message = "While I don't agree with you, I will defend to the death your right to say it."  # ;
+    message = "hmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm... i guess thats ok but i'd rather die than do that..."  # ;
 
 # Run the window's .messagebox.showinfo() method with the message variable
 messagebox.showinfo(message=message)  # ;
