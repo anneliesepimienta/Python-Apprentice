@@ -2,6 +2,7 @@ from tkinter import messagebox, simpledialog, Tk
 
 # Create a new window variable, window = Tk()
 
+
 # Hide the window using the window's .withdraw() method
 window.withdraw()  # ;
 

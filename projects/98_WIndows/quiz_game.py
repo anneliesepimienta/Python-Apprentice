@@ -22,9 +22,15 @@ messagebox.showinfo(message="Your final score is " + str(score))  # ;
 # ASK A QUESTION AND CHECK THE ANSWER
 
 # // 2. Ask the user a question
-
+question = simpledialog.askstring(title = "", prompt = "what type of coding language is used for most AI?")
 # // 3. Use an if statement to check if their answer is correct
-
+if question.lower() == "python":
+    score+= 1
+    print("CONGRATUALTIONS! your answer is correct your score is now " + str(score))
+else:
+    score-= 1
+    messagebox.showerror(message="YOUR ANSWER IS WRONG! it's python")
+messagebox.showinfo(title="", message="your final score is " + str(score))
 # // 4. if the user's answer was correct, add one to their score
 
 # MAKE MORE QUESTIONS. Ask more questions by repeating the above
