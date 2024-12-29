@@ -4,7 +4,7 @@ from tkinter import messagebox, simpledialog, Tk
 window = Tk()  # ;
 
 # Hide the window using the window's .withdraw() method
-window.withdraw()  # ;
+window.withdraw()  #
 
 # 1. Ask the user if they know how to write code.
 response = simpledialog.askstring(None, prompt="Do you know how to code?")  # ;
