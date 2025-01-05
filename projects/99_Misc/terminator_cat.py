@@ -28,7 +28,7 @@ def setBackground(filename):
         return
 
     window.setup(image.width, image.height, startx=0, starty=0)
-    window.bgpic(file_path)
+    window.bgpic(file_path) 
 
 
 # ====================== DO NOT EDIT THE CODE ABOVE ===========================
@@ -67,7 +67,7 @@ window = turtle.Screen()
 
 # 2. Call the setBackground() function with your variable inside of the parenthesis
 #    for example, setBackground("cat.gif")
-setBackground("bigEyedCat.gif")  # ;
+setBackground("wide_eyed.catgif.gif")  # ;
 
 # 3. Make a new turtle
 myTurtle = turtle.Turtle()  # ;
@@ -90,8 +90,8 @@ myTurtle.speed(0)  # ;
 # 8. After you've found the x and y for the eyes create 2 eye variables and initialize them:
 #    leftEye = Eye(x=-34, y=11, radius=30)
 #    rightEye = Eye(x=40, y=-5, radius=30)
-leftEye = Eye(x=-34, y=11, radius=30)  # ;
-rightEye = Eye(x=40, y=-5, radius=30)  # ;
+leftEye = Eye(x=-51, y=-19, radius=30)  # ;
+rightEye = Eye(x=51, y=-26, radius=30)  # ;
 
 # 9. Call the .draw() method on both eye variables
 leftEye.draw()  # ;
