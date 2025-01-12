@@ -6,6 +6,9 @@ Implement the random_walk function that will move the turtle randomly in the gri
 
 """
 
+
+
+
 import turtle
 import random
 
