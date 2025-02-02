@@ -1,5 +1,5 @@
-import turtle
-from tkinter import messagebox, simpledialog, Tk
+import turtlefrom tkinter import messagebox, simpledialog, Tk
+
 import math
 
 window = Tk()
