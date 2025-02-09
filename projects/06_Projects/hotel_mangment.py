@@ -1,7 +1,6 @@
 """hi"""
-import messagebox, simpledialog, Tk
 import random
-
+from tkinter import messagebox, simpledialog, Tk
 """
 check-max # of nights 5
 check-max # of rooms 10
@@ -13,13 +12,19 @@ max poeple trying to check in 10
 """
 
 
-check_in = simpledialog.askstring(title="", prompt="Are you here for check in or check out?")
-if check_in == "check in":
-    num_nights= simpledialog.askstring(title="",prompt="ok, and how many nights will you be staying with us?(you cannot stay for more than 5 nights max)")
-    name = simpledialog.askstring(title = "", prompt="what will the name be that your room will be under?")
-         
-#add the answers to the dictionary
-
 guest_info = dict()
-guest_info[name]=(random.randint(1, 10), num_nights)
-    
+
+
+while True:
+    check_in_check_out = simpledialog.askstring(title="", prompt="Are you here for check in or check out?")
+    if check_in_check_out == "check in":
+        num_nights= simpledialog.askstring(title="",prompt="ok, and how many nights will you be staying with us?(you cannot stay for more than 5 nights max)")
+        name = simpledialog.askstring(title = "", prompt="what will the name be that your room will be under?")
+            
+        guest_info[name]=(random.randint(1, 10), num_nights)    
+
+    elif check_in_check_out == "check out":
+        checkout_name = simpledialog.askstring(title="", prompt="what name was your room under?")
+        print(guest_info[checkout_name][1])
+        print(guest_info[checkout_name])
+        del guest_info[checkout_name]
