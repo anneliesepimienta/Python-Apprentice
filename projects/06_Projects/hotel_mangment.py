@@ -24,19 +24,27 @@ def get_price(floor, nights):
     elif floor == 9:
         return nights * 400
     else:
-        return nights * 10,000
+        return nights * 10000
 
 while True:
     check_in_check_out = simpledialog.askstring(title="", prompt="Are you here for check in or check out?")
     if check_in_check_out == "check in":
         nights= simpledialog.askinteger(title="",prompt="ok, and how many nights will you be staying with us?(you cannot stay for more than 5 nights max)")
-        name = simpledialog.askstring(title = "", prompt="what will the name be that your room will be under?")
         floor= simpledialog.askinteger(title="", prompt="what floor whould you like. Each floors price gets higher because of it's better value. the 10th floor in VIP, which is worth the most.")
-        
+        name = simpledialog.askstring(title = "", prompt="what will the name be that your room will be under?")
+        messagebox.showinfo(title="", message="your visit comes with our free cleaning service and complementary meal buffet. thank for staying with us and have a good rest of your day")
+
         guest_info[name]=(floor, nights)    
 
     elif check_in_check_out == "check out":
         checkout_name = simpledialog.askstring(title="", prompt="what name was your room under?")
+        tip = simpledialog.askstring(title="", prompt="would you like to give a tip to our cleaning service?(yes or no)")
+        if tip == "yes":
+            print(5 + get_price(guest_info[checkout_name][0], guest_info[checkout_name][1]))
+        elif tip == "no":
+            messagebox.showinfo(title="", message="ok thank for staying and have a good rest of your day")
+        else:
+            print("qwert2")
         print(guest_info[checkout_name][1])
         print(guest_info[checkout_name])
         print(get_price(guest_info[checkout_name][0], guest_info[checkout_name][1]))
