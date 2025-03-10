@@ -34,20 +34,22 @@ while True:
         name = simpledialog.askstring(title = "", prompt="what will the name be that your room will be under?")
         messagebox.showinfo(title="", message="your visit comes with our free cleaning service and complementary meal buffet. thank for staying with us and have a good rest of your day")
 
-        guest_info[name]=(floor, nights)    
+        guest_info[name]=(floor, nights)
+        print(guest_info)  
 
     elif check_in_check_out == "check out":
         checkout_name = simpledialog.askstring(title="", prompt="what name was your room under?")
         tip = simpledialog.askstring(title="", prompt="would you like to give a tip to our cleaning service?(yes or no)")
         if tip == "yes":
             print(5 + get_price(guest_info[checkout_name][0], guest_info[checkout_name][1]))
+            print(guest_info[checkout_name])
         elif tip == "no":
             messagebox.showinfo(title="", message="ok thank for staying and have a good rest of your day")
+            print(guest_info[checkout_name][1])
+            
+            print(get_price(guest_info[checkout_name][0], guest_info[checkout_name][1]))
+            print(guest_info[checkout_name])
+            del guest_info[checkout_name]
         else:
-            print("qwert2")
-        print(guest_info[checkout_name][1])
-        print(guest_info[checkout_name])
-        print(get_price(guest_info[checkout_name][0], guest_info[checkout_name][1]))
-        del guest_info[checkout_name]
-
-    
+            print("THERE WAS AN ERROR. PLEASE TRY AGAIN. PLEASE RECODNISE THAT THE ANWER CAN ONLY BE EITHER YES OR NO IN THE EXACT SPELLING SAID IN THE TEXT.")
+        
